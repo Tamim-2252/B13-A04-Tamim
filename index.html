@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-[#F8FAFC]">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PH-Job-Tracker</title>
+
+    <!-- tailwind & daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        *{
+              font-family: "Geist", sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class=" w-[70%] mx-auto">
+    <header>
+        <p class="text-[32px] text-[#002C5C] font-bold pt-[60px] pb-5">Job Application Tracker</p>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="bg-white border border-[#F1F2F4] p-5 rounded-lg space-y-2">
+                <p class="text-[14px] font-medium text-[#323B49]">Total</p>
+                <p id="total" class="font-bold text-[#002C5C] text-2xl">0</p>
+            </div>
+            <div class="bg-white border border-[#F1F2F4] p-5 rounded-lg space-y-2">
+                <p class="text-[14px] font-medium text-[#323B49]">Interview</p>
+                <p id="total-interview" class="font-bold text-[#10B981] text-2xl">0</p>
+            </div>
+            <div class="bg-white border border-[#F1F2F4] p-5 rounded-lg space-y-2">
+                <p class="text-[14px] font-medium text-[#323B49]">Rejected</p>
+                <p id="total-rejected" class="font-bold text-[#EF4444] text-2xl">0</p>
+            </div>
+        </div>
+        <hr class=" border border-[#E6E7E9] my-[30px]">
+    </header>
+    <main>
+        <section>
+            <div class="flex justify-between pb-6">
+                <p class="font-semibold text-xl text-[#002C5C] ">Available Jobs</p>
+                <p class="font-medium text-base text-[gray]"><span>0</span> jobs</p>
+            </div>
+            <div>
+                <button class=" bg-[#3B82F6] text-white w-20 h-8 rounded font-semibold text-xs ">All</button>
+            </div>
+        </section>
+    </main>
+
 </body>
+
 </html>
