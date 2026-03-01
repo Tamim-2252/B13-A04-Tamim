@@ -52,11 +52,11 @@
         </div>
         <hr class=" border border-[#E6E7E9] my-[30px]">
     </header>
-    <main>
+    <main id="jobs-container">
         <section id="button-section">
             <div class="flex justify-between pb-6">
                 <p class="font-semibold text-xl text-[#002C5C] ">Available Jobs</p>
-                <p class="font-medium text-base text-[gray]"><span id="stotal">0</span> jobs</p>
+                <p class="font-medium text-base text-[gray]"><span id="available">0</span> jobs</p>
             </div>
             <div class="flex gap-2">
                 <button onclick="switchTab('all')"
@@ -67,20 +67,21 @@
                     id="rejected" class=" bg-white border border-[#F1F2F4] text-[gray] w-20 h-8 rounded font-medium text-xs ">Rejected</button>
             </div>
         </section>
-        <section id="job-container" class="space-y-4 pt-4 pb-[60px]">
-            <div class="p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+
+        <section id="all-container" class="space-y-4 pt-4 pb-[60px]">
+            <div class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">Mobile First Corp</p>
                         <p class="text-[gray] leading-[22px]">React Native Developer</p>
                     </div>
-                    <div class="delete-box ">
-                        <img src="images/deleat.png" alt="" class="w-3 h-[13px]">
+                    <div class="delete-box delete ">
+                        <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
                 <p class="text-[gray] text-sm">Remote • Full-time • $130,000 - $175,000</p>
                 <div>
-                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm">NOT
+                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm states">NOT
                         APPLIED</button>
                     <p class="pt-2 text-sm text-[#323B49]">Build cross-platform mobile applications using React Native.
                         Work on products used by millions of
@@ -88,48 +89,48 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
                 </div>
             </div>
-            <div class="p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">WebFlow Agency</p>
                         <p class="text-[gray] leading-[22px]">Web Designer & Developer</p>
                     </div>
-                    <div class="delete-box ">
-                        <img src="images/deleat.png" alt="" class="w-3 h-[13px]">
+                    <div class="delete-box delete ">
+                        <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
                 <p class="text-[gray] text-sm">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
                 <div>
-                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm">NOT
+                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm states">NOT
                         APPLIED</button>
                     <p class="pt-2 text-sm text-[#323B49]">Create stunning web experiences for high-profile clients.
                         Must have portfolio and experience with modern web design trends.</p>
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
                 </div>
             </div>
-            <div class="p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">DataViz Solutions</p>
                         <p class="text-[gray] leading-[22px]">Data Visualization Specialist</p>
                     </div>
-                    <div class="delete-box ">
-                        <img src="images/deleat.png" alt="" class="w-3 h-[13px]">
+                    <div class="delete-box delete">
+                        <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
                 <p class="text-[gray] text-sm">Boston, MA • Full-time • $125,000 - $165,000</p>
                 <div>
-                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm">NOT
+                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm states">NOT
                         APPLIED</button>
                     <p class="pt-2 text-sm text-[#323B49]">Transform complex data into compelling visualizations.
                         Required skills: D3.js, React, and strong analytical thinking.
@@ -137,72 +138,72 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
                 </div>
             </div>
-            <div class="p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">CloudFirst Inc</p>
                         <p class="text-[gray] leading-[22px]">Backend Developer</p>
                     </div>
-                    <div class="delete-box ">
-                        <img src="images/deleat.png" alt="" class="w-3 h-[13px]">
+                    <div class="delete-box delete">
+                        <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
                 <p class="text-[gray] text-sm">Seattle, WA • Full-time • $140,000 - $190,000</p>
                 <div>
-                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm">NOT
+                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm states">NOT
                         APPLIED</button>
                     <p class="pt-2 text-sm text-[#323B49]">Design and maintain scalable backend systems using Python and
                         AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
                 </div>
             </div>
-            <div class="p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">Innovation Labs</p>
                         <p class="text-[gray] leading-[22px]">UI/UX Engineer</p>
                     </div>
-                    <div class="delete-box ">
-                        <img src="images/deleat.png" alt="" class="w-3 h-[13px]">
+                    <div class="delete-box delete">
+                        <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
                 <p class="text-[gray] text-sm">Austin, TX • Full-time • $110,000 - $150,000</p>
                 <div>
-                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm">NOT
+                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm states">NOT
                         APPLIED</button>
                     <p class="pt-2 text-sm text-[#323B49]">Create beautiful and functional user interfaces for our suite
                         of products. Strong design skills and frontend development expertise required.</p>
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
                 </div>
             </div>
-            <div class="p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">MegaCorp Solutions</p>
                         <p class="text-[gray] leading-[22px]">JavaScript Developer</p>
                     </div>
-                    <div class="delete-box ">
-                        <img src="images/deleat.png" alt="" class="w-3 h-[13px]">
+                    <div class="delete-box delete">
+                        <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
                 <p class="text-[gray] text-sm">New York, NY • Full-time • $130,000 - $170,00</p>
                 <div>
-                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm">NOT
+                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm states">NOT
                         APPLIED</button>
                     <p class="pt-2 text-sm text-[#323B49]">Build enterprise applications with JavaScript and modern
                         frameworks. We offer competitive compensation, health insurance, and professional development
@@ -210,48 +211,48 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
                 </div>
             </div>
-            <div class="p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">StartupXYZ</p>
                         <p class="text-[gray] leading-[22px]">Full Stack Engineer</p>
                     </div>
-                    <div class="delete-box ">
-                        <img src="images/deleat.png" alt="" class="w-3 h-[13px]">
+                    <div class="delete-box delete">
+                        <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
                 <p class="text-[gray] text-sm">Remote • Full-time • $120,000 - $160,000</p>
                 <div>
-                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm">NOT
+                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm states">NOT
                         APPLIED</button>
                     <p class="pt-2 text-sm text-[#323B49]">Join our fast-growing startup and work on our core platform.
                         Experience with Node.js and React required. Great benefits and equity package included.</p>
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
                 </div>
             </div>
-            <div class="p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">TechCorp Industries</p>
                         <p class="text-[gray] leading-[22px]">Senior Frontend Developer</p>
                     </div>
-                    <div class="delete-box ">
-                        <img src="images/deleat.png" alt="" class="w-3 h-[13px]">
+                    <div class="delete-box delete">
+                        <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
                 <p class="text-[gray] text-sm">San Francisco, CA • Full-time • $130,000 - $175,000</p>
                 <div>
-                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm">NOT
+                    <button class="bg-[#EEF4FF] px-3 py-2 text-[#002C5C] rounded font-medium text-sm states">NOT
                         APPLIED</button>
                     <p class="pt-2 text-sm text-[#323B49]">We are looking for an experienced Frontend Developer to build
                         scalable web applications using React and TypeScript. You will work with a talented team on
@@ -259,14 +260,18 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
                 </div>
             </div>
 
         </section>
-        <section id="no-job">
+
+        <section id="interview-container" class="space-y-4 pt-4 pb-[60px] hidden"></section>
+        <section id="rejected-container" class="space-y-4 pt-4 pb-[60px] hidden"></section>
+
+        <section id="no-job" class="hidden">
             <div class="bg-white border border-[#F1F2F4] rounded-lg px-10 py-15 space-y-5 mb-32">
                 <div class="flex justify-center">
                     <img src="images/jobs.png" alt="">
