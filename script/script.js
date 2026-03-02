@@ -10,6 +10,7 @@ const allContainer = document.getElementById('all-container');
 const interviewContainer = document.getElementById('interview-container');
 const rejectedContainer = document.getElementById('rejected-container');
 const noJob = document.getElementById("no-job");
+const cards = document.getElementsByClassName("card");
 let currentTab = "all";
 
 // button function
@@ -41,20 +42,31 @@ function switchTab(tab) {
 }
 
 // count function
+
 function countingJobs() {
 
-    const counts = {
-        all: allContainer.children.length,
-        interview: interviewContainer.children.length,
-        rejected: rejectedContainer.children.length,
+    total.innerText = allContainer.children.length;
+    totalInterview.innerText = countStatus("interview");
+    totalRejected.innerText = countStatus("rejected");
+    if (currentTab !== "all") {
+          available.innerText = countStatus(currentTab);
+    }else{
+        available.innerText = allContainer.children.length;
+    }
+  
+
+    function countStatus(bar) {
+        let count = 0;
+        for (let c = 0; c < cards.length; c++) {
+
+            if (cards[c].getAttribute("data-status") === bar) {
+                count++;
+            }
+        }
+        return count;
     }
 
-    total.innerText = counts.all;
-    totalInterview.innerText = counts.interview;
-    totalRejected.innerText = counts.rejected;
-    available.innerText = counts[currentTab];
-
-    if (counts[currentTab] < 1) {
+    if (available.innerText < 1) {
         noJob.classList.remove("hidden");
     }
     else {
@@ -72,7 +84,7 @@ document.getElementById("jobs-container").addEventListener("click", function (ev
     const parent = card.parentNode;
 
     if (clickedElement.classList.contains("interview")) {
-        
+
         states.innerText = "INTERVIEW";
         states.classList.remove("text-[red]");
         states.classList.add("text-[#10B981]");
@@ -83,7 +95,7 @@ document.getElementById("jobs-container").addEventListener("click", function (ev
         card.setAttribute("data-status", "interview");
     }
     if (clickedElement.classList.contains("rejected")) {
-        
+
         states.innerText = "REJECTED";
         // states.classList.remove("text-[#10B981]");
         states.classList.add("text-[red]");
@@ -94,13 +106,15 @@ document.getElementById("jobs-container").addEventListener("click", function (ev
         card.setAttribute("data-status", "rejected");
     }
 
+    if (clickedElement.classList.contains("delete")) {
+        parent.removeChild(card);
+    }
+    countingJobs();
+
 })
 
 
 // filter function
-
-const cards = document.getElementsByClassName("card");
-console.log(cards);
 
 function filter(tab) {
 
@@ -121,14 +135,7 @@ function filter(tab) {
 
 
 
-    // for (let c = 0; c < allContainer.children.length; c++) {
 
-    //     let count = 0;
-    //     if (cards[c].getAttribute("data-status") === currentTab) {
-    //         count++;
-    //     }
-    //     available.innerText = count;
-    // }
 
 // const total = document.getElementById('total');
 // const available = document.getElementById('available');
