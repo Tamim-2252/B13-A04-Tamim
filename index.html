@@ -59,17 +59,17 @@
                 <p class="font-medium text-base text-[gray]"><span id="available">0</span> jobs</p>
             </div>
             <div class="flex gap-2">
-                <button onclick="switchTab('all')"
+                <button onclick="switchTab('all'); filter('all');"
                     id="all" class=" bg-[#3B82F6] text-white w-20 h-8 rounded font-semibold text-xs ">All</button>
-                <button onclick="switchTab('interview')"
+                <button onclick="switchTab('interview'); filter('interview');"
                     id="interview" class=" bg-white border border-[#F1F2F4] text-[gray] w-20 h-8 rounded font-medium text-xs ">Interview</button>
-                <button onclick="switchTab('rejected')"
+                <button onclick="switchTab('rejected'); filter('rejected');"
                     id="rejected" class=" bg-white border border-[#F1F2F4] text-[gray] w-20 h-8 rounded font-medium text-xs ">Rejected</button>
             </div>
         </section>
 
         <section id="all-container" class="space-y-4 pt-4 pb-[60px]">
-            <div class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div data-status="all" class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5 apply">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">Mobile First Corp</p>
