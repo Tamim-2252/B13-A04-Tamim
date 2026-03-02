@@ -28,16 +28,6 @@ function switchTab(tab) {
             tabName.classList.remove(...tabActive);
             tabName.classList.add(...tabInactive);
         }
-
-        const containerName = document.getElementById(t + "-container")
-        if (t === tab) {
-            if (containerName.children.length < 1) {
-                noJob.classList.remove("hidden");
-            }
-            else {
-                noJob.classList.add("hidden");
-            }
-        }
     } countingJobs()
 }
 
@@ -77,7 +67,7 @@ function countingJobs() {
 
 // card function
 
-document.getElementById("jobs-container").addEventListener("click", function (event) {
+document.getElementById("all-container").addEventListener("click", function (event) {
     const clickedElement = event.target;
     const card = clickedElement.closest(".card");
     const states = card.querySelector(".states");
@@ -134,6 +124,12 @@ function filter(tab) {
 
 
 
+//  NOTE : The code below was written according to sollution class .
+//         It does not meet the assignment requerment. the whole concept is WebTransportDatagramDuplexStream.
+//         I wasted time following class after that i had to rewrite the code.
+//         It toggles the card insted of filtering.
+
+// Lessone: Do assignmentby yourself, Never follow sollution class.
 
 
 

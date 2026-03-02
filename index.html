@@ -33,19 +33,19 @@
     </style>
 </head>
 
-<body class=" w-[70%] mx-auto">
+<body class="sm:w-[70%] mx-auto w-[94%]">
     <header>
         <p class="text-[32px] text-[#002C5C] font-bold pt-[60px] pb-5">Job Application Tracker</p>
-        <div class="grid grid-cols-3 gap-4">
-            <div class="bg-white border border-[#F1F2F4] p-5 rounded-lg space-y-2">
+        <div class="grid  sm:grid-cols-3 gap-4">
+            <div class="bg-white border border-[#F1F2F4] p-5 rounded-lg space-y-2 hover:shadow-md">
                 <p class="text-[14px] font-medium text-[#323B49]">Total</p>
                 <p id="total" class=" font-bold text-[#002C5C] text-2xl">0</p>
             </div>
-            <div class="bg-white border border-[#F1F2F4] p-5 rounded-lg space-y-2">
+            <div class="bg-white border border-[#F1F2F4] p-5 rounded-lg space-y-2 hover:shadow-md">
                 <p class="text-[14px] font-medium text-[#323B49]">Interview</p>
                 <p id="total-interview" class="font-bold text-[#10B981] text-2xl">0</p>
             </div>
-            <div class="bg-white border border-[#F1F2F4] p-5 rounded-lg space-y-2">
+            <div class="bg-white border border-[#F1F2F4] p-5 rounded-lg space-y-2 hover:shadow-md">
                 <p class="text-[14px] font-medium text-[#323B49]">Rejected</p>
                 <p id="total-rejected" class="font-bold text-[#EF4444] text-2xl">0</p>
             </div>
@@ -59,23 +59,24 @@
                 <p class="font-medium text-base text-[gray]"><span id="available">0</span> jobs</p>
             </div>
             <div class="flex gap-2">
-                <button onclick="switchTab('all'); filter('all');"
-                    id="all" class=" bg-[#3B82F6] text-white w-20 h-8 rounded font-semibold text-xs ">All</button>
-                <button onclick="switchTab('interview'); filter('interview');"
-                    id="interview" class=" bg-white border border-[#F1F2F4] text-[gray] w-20 h-8 rounded font-medium text-xs ">Interview</button>
-                <button onclick="switchTab('rejected'); filter('rejected');"
-                    id="rejected" class=" bg-white border border-[#F1F2F4] text-[gray] w-20 h-8 rounded font-medium text-xs ">Rejected</button>
+                <button onclick="switchTab('all'); filter('all');" id="all"
+                    class=" bg-[#3B82F6] text-white w-20 h-8 rounded font-semibold text-xs hover:shadow-md ">All</button>
+                <button onclick="switchTab('interview'); filter('interview');" id="interview"
+                    class=" bg-white border border-[#F1F2F4] text-[gray] w-20 h-8 rounded font-medium text-xs  hover:shadow-md">Interview</button>
+                <button onclick="switchTab('rejected'); filter('rejected');" id="rejected"
+                    class=" bg-white border border-[#F1F2F4] text-[gray] w-20 h-8 rounded font-medium text-xs  hover:shadow-md">Rejected</button>
             </div>
         </section>
 
         <section id="all-container" class="space-y-4 pt-4 pb-[60px]">
-            <div data-status="all" class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div data-status="all"
+                class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5 hover:shadow-md">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">Mobile First Corp</p>
                         <p class="text-[gray] leading-[22px]">React Native Developer</p>
                     </div>
-                    <div class="delete-box delete ">
+                    <div class="delete-box delete hover:shadow-md ">
                         <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
@@ -89,18 +90,19 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm hover:shadow-md hover:bg-[#10B981] hover:text-[white] interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm hover:shadow-md hover:bg-[red] hover:text-[white] rejected">REJECTED</button>
                 </div>
             </div>
-            <div data-status="all" class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div data-status="all"
+                class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5 hover:shadow-md">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">WebFlow Agency</p>
                         <p class="text-[gray] leading-[22px]">Web Designer & Developer</p>
                     </div>
-                    <div class="delete-box delete ">
+                    <div class="delete-box delete  hover:shadow-md">
                         <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
@@ -113,18 +115,19 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm hover:shadow-md hover:bg-[#10B981] hover:text-[white] interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm hover:shadow-md hover:bg-[red] hover:text-[white] rejected">REJECTED</button>
                 </div>
             </div>
-            <div data-status="all" class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div data-status="all"
+                class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5 hover:shadow-md">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">DataViz Solutions</p>
                         <p class="text-[gray] leading-[22px]">Data Visualization Specialist</p>
                     </div>
-                    <div class="delete-box delete">
+                    <div class="delete-box delete hover:shadow-md">
                         <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
@@ -138,18 +141,19 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm hover:shadow-md hover:bg-[#10B981] hover:text-[white] interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm hover:shadow-md hover:bg-[red] hover:text-[white] rejected">REJECTED</button>
                 </div>
             </div>
-            <div data-status="all" class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div data-status="all"
+                class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5 hover:shadow-md">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">CloudFirst Inc</p>
                         <p class="text-[gray] leading-[22px]">Backend Developer</p>
                     </div>
-                    <div class="delete-box delete">
+                    <div class="delete-box delete hover:shadow-md">
                         <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
@@ -162,18 +166,19 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm hover:shadow-md hover:bg-[#10B981] hover:text-[white] interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm hover:shadow-md hover:bg-[red] hover:text-[white] rejected">REJECTED</button>
                 </div>
             </div>
-            <div data-status="all" class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div data-status="all"
+                class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5 hover:shadow-md">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">Innovation Labs</p>
                         <p class="text-[gray] leading-[22px]">UI/UX Engineer</p>
                     </div>
-                    <div class="delete-box delete">
+                    <div class="delete-box delete hover:shadow-md">
                         <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
@@ -186,18 +191,19 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm hover:shadow-md hover:bg-[#10B981] hover:text-[white] interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm hover:shadow-md hover:bg-[red] hover:text-[white] rejected">REJECTED</button>
                 </div>
             </div>
-            <div data-status="all" class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div data-status="all"
+                class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5 hover:shadow-md">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">MegaCorp Solutions</p>
                         <p class="text-[gray] leading-[22px]">JavaScript Developer</p>
                     </div>
-                    <div class="delete-box delete">
+                    <div class="delete-box delete hover:shadow-md">
                         <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
@@ -211,18 +217,19 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm hover:shadow-md hover:bg-[#10B981] hover:text-[white] interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm hover:shadow-md hover:bg-[red] hover:text-[white] rejected">REJECTED</button>
                 </div>
             </div>
-            <div data-status="all" class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div data-status="all"
+                class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5 hover:shadow-md">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">StartupXYZ</p>
                         <p class="text-[gray] leading-[22px]">Full Stack Engineer</p>
                     </div>
-                    <div class="delete-box delete">
+                    <div class="delete-box delete hover:shadow-md">
                         <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
@@ -235,18 +242,19 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm hover:shadow-md hover:bg-[#10B981] hover:text-[white] interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm hover:shadow-md hover:bg-[red] hover:text-[white] rejected">REJECTED</button>
                 </div>
             </div>
-            <div data-status="all" class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5">
+            <div data-status="all"
+                class="card p-6 bg-white border border-[#F1F2F4] rounded-lg space-y-5 hover:shadow-md">
                 <div class="flex justify-between">
                     <div class="space-y-1">
                         <p class="text-[18px] font-semibold text-[#002C5C] leading-[26px]">TechCorp Industries</p>
                         <p class="text-[gray] leading-[22px]">Senior Frontend Developer</p>
                     </div>
-                    <div class="delete-box delete">
+                    <div class="delete-box delete hover:shadow-md">
                         <img src="images/deleat.png" alt="" class="w-3 h-[13px] delete">
                     </div>
                 </div>
@@ -260,19 +268,16 @@
                 </div>
                 <div class="flex gap-2">
                     <button
-                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm interview">INTERVIEW</button>
+                        class="px-3 py-2 rounded border border-[#10B981] text-[#10B981] font-semibold text-sm hover:shadow-md hover:bg-[#10B981] hover:text-[white] interview">INTERVIEW</button>
                     <button
-                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm rejected">REJECTED</button>
+                        class="px-3 py-2 rounded border border-[red] text-[red] font-semibold text-sm hover:shadow-md hover:bg-[red] hover:text-[white] rejected">REJECTED</button>
                 </div>
             </div>
 
         </section>
 
-        <section id="interview-container" class="space-y-4 pt-4 pb-[60px] hidden"></section>
-        <section id="rejected-container" class="space-y-4 pt-4 pb-[60px] hidden"></section>
-
         <section id="no-job" class="hidden">
-            <div class="bg-white border border-[#F1F2F4] rounded-lg px-10 py-15 space-y-5 mb-32">
+            <div class="bg-white border border-[#F1F2F4] rounded-lg px-10 py-15 space-y-5 mb-32 hover:shadow-md">
                 <div class="flex justify-center">
                     <img src="images/jobs.png" alt="">
                 </div>
